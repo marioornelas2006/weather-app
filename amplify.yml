@@ -3,7 +3,7 @@ frontend:
   phases:
     preBuild:
       commands:
-        - npm ci
+        - npm install
         - printf "CHECKWX_API_KEY=%s\nGEMINI_API_KEY=%s\n" "$CHECKWX_API_KEY" "$GEMINI_API_KEY" > .env.production
     build:
       commands:

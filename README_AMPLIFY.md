@@ -20,3 +20,8 @@ Set these in Amplify Hosting:
 
 ## Important
 This repo includes `amplify.yml` so Amplify writes the environment variables into `.env.production` before the Next.js build.
+
+
+v2 fix:
+- Changed the Amplify preBuild step from `npm ci` to `npm install`.
+- This avoids the deployment failure when the repo does not include a `package-lock.json`.
