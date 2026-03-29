@@ -1294,7 +1294,7 @@ async function loadRoute(){
   document.getElementById('countdownSpan').style.display='';
   document.getElementById('refreshBtn').disabled=false;
   document.getElementById('toggleBtn').disabled=false;
-  enablePageNav();
+  // enablePageNav();
   enableRetryAiButton(false);
   showPage('main');
   document.getElementById('toggleBtn').textContent='Pause';
