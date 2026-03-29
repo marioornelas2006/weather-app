@@ -1,0 +1,27 @@
+# AWS Amplify version
+
+This build converts the app from Netlify Functions to a Next.js app with API routes that AWS Amplify Hosting supports.
+
+## What changed
+- Frontend now lives in `public/app.html`
+- Root URL redirects to `/app.html`
+- Backend endpoints are now:
+  - `/api/config`
+  - `/api/gemini`
+  - `/api/progchart`
+  - `/api/awc`
+  - `/api/runways`
+  - `/api/pdfextract`
+
+## Required Amplify environment variables
+Set these in Amplify Hosting:
+- `CHECKWX_API_KEY`
+- `GEMINI_API_KEY`
+
+## Important
+This repo includes `amplify.yml` so Amplify writes the environment variables into `.env.production` before the Next.js build.
+
+
+v2 fix:
+- Changed the Amplify preBuild step from `npm ci` to `npm install`.
+- This avoids the deployment failure when the repo does not include a `package-lock.json`.
