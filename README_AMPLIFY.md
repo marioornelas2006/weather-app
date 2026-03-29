@@ -25,3 +25,9 @@ This repo includes `amplify.yml` so Amplify writes the environment variables int
 v2 fix:
 - Changed the Amplify preBuild step from `npm ci` to `npm install`.
 - This avoids the deployment failure when the repo does not include a `package-lock.json`.
+
+
+v3 fix:
+- Removed the redirect from `/` to `/app.html`.
+- The app now renders directly from `pages/index.js`, which is more reliable for Amplify Hosting with Next.js.
+- API routes remain under `pages/api/*`.
